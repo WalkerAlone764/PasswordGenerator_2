@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Password Generator
+        </title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div class="title">
+            <h1 id="whiteText">Generate a</h1>
+            <h1 id="greenText">random password</h1>
+        </div>
+        <div class="desc">
+            <p>Never use an insecure password again.</p>
+        </div>
+
+        <button onclick="showPass()">Generate password</button>
+        <div id="userInfo">
+            <input type="checkbox" id="user" value="off" onclick="display()">
+            <label for="user">Want Manual Input?</label>
+            <div id="info">
+                <input type="number" value="0" id="length" placeholder="enter number ">
+                <br>
+                <input type="checkbox" value="off" id="includeNumber">
+                <label for="includeNumber" onclick="toNumber()">don't include number</label>
+                <br>
+                <input type="checkbox" value="off" id="includespecial">
+                <label for="includespecial" onclick="toSpecial()">don't include special</label>
+                <br>
+                <input type="checkbox" value="off" id="includestring">
+                <label for="includestring" onclick="changeString()">don't include string</label>
+            </div>
+        </div>
+        <hr>
+
+        <div class="show">
+            <div class="field show1" onclick="copyToClip('show1')">
+            </div>
+            <div class="field show2" onclick="copyToClip('show2')">
+            </div>
+            
+        </div>
+
+        <br>
+
+        <!-- <div class="center">
+            <label class="switch">
+                <input type="checkbox" onclick="temp()">
+                <span class="slider round"></span>
+            </label>
+            <p id="turn">don't include number</p>
+        </div> -->
+
+
+        <script src="index.js"></script>
+    </body>
+</html>
